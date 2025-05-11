@@ -1,4 +1,0 @@
-module CPlaydate [system] {
-  umbrella header "CPlaydate.h"
-  export *
-}
