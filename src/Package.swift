@@ -32,14 +32,13 @@ let package = Package(
     .library(name: "9thCircle", targets: ["9thCircle"])
   ],
   dependencies: [
-    .package(path: "../..")
+      .package(path: "./PlaydateAPI")
   ],
   targets: [
     .target(
-      name: "9thCircle",
-      dependencies: [
-        .product(name: "Playdate", package: "swift-playdate-examples")
-      ],
-      swiftSettings: swiftSettingsSimulator)
+        name: "9thCircle",
+        dependencies: ["PlaydateAPI"],
+        path: "src/9thCircle"
+    ),
   ],
   swiftLanguageVersions: [.version("6"), .v5])
