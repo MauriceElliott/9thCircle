@@ -57,7 +57,7 @@ index 51f6383..1e3fd6b 100644
    "extensionValues" : {
      "playdate.build-type" : "make",
      "playdate.debugRequest" : "launch",
--    "playdate.product-name" : "{{Game Name}}"
+-    "playdate.product-name" : "9thCircle"
 +    "playdate.product-name" : "MyGame"
    }
  }
@@ -74,7 +74,7 @@ index 902dae5..a4dfb53 100644
          {
              "label": "build",
              "type": "shell",
--            "command": "make && $HOME/Developer/PlaydateSDK/bin/Playdate\\ Simulator.app/Contents/MacOS/Playdate\\ Simulator {{Game Name}}.pdx",
+-            "command": "make && $HOME/Developer/PlaydateSDK/bin/Playdate\\ Simulator.app/Contents/MacOS/Playdate\\ Simulator 9thCircle.pdx",
 +            "command": "make && $HOME/Developer/PlaydateSDK/bin/Playdate\\ Simulator.app/Contents/MacOS/Playdate\\ Simulator MyGame.pdx",
          }
      ]
@@ -92,10 +92,10 @@ index 5cc2b02..6b9275c 100644
  ]
  
  let package = Package(
--  name: "{{Game Name}}",
+-  name: "9thCircle",
 +  name: "MyGame",
    products: [
--    .library(name: "{{Game Name}}", targets: ["{{Game Name}}"]),
+-    .library(name: "9thCircle", targets: ["9thCircle"]),
 +    .library(name: "MyGame", targets: ["MyGame"]),
    ],
    dependencies: [
@@ -103,7 +103,7 @@ index 5cc2b02..6b9275c 100644
    ],
    targets: [
      .target(
--      name: "{{Game Name}}",
+-      name: "9thCircle",
 +      name: "MyGame",
        dependencies: [
          .product(name: "Playdate", package: "swift-playdate-examples")
@@ -121,9 +121,9 @@ index 867fae9..f8814ab 100644
              buildForAnalyzing = "YES">
              <BuildableReference
                 BuildableIdentifier = "primary"
--               BlueprintIdentifier = "{{Game Name}}"
--               BuildableName = "{{Game Name}}"
--               BlueprintName = "{{Game Name}}"
+-               BlueprintIdentifier = "9thCircle"
+-               BuildableName = "9thCircle"
+-               BlueprintName = "9thCircle"
 +               BlueprintIdentifier = "MyGame"
 +               BuildableName = "MyGame"
 +               BlueprintName = "MyGame"

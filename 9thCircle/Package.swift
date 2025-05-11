@@ -24,19 +24,19 @@ let swiftSettingsSimulator: [SwiftSetting] = [
 ]
 
 let package = Package(
-  name: "{{Game Name}}",
+  name: "9thCircle",
   platforms: [
     .macOS(.v14)
   ],
   products: [
-    .library(name: "{{Game Name}}", targets: ["{{Game Name}}"])
+    .library(name: "9thCircle", targets: ["9thCircle"])
   ],
   dependencies: [
     .package(path: "../..")
   ],
   targets: [
     .target(
-      name: "{{Game Name}}",
+      name: "9thCircle",
       dependencies: [
         .product(name: "Playdate", package: "swift-playdate-examples")
       ],

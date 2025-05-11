@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "{{Game Name}}"
-               BuildableName = "{{Game Name}}"
-               BlueprintName = "{{Game Name}}"
+               BlueprintIdentifier = "9thCircle"
+               BuildableName = "9thCircle"
+               BlueprintName = "9thCircle"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
