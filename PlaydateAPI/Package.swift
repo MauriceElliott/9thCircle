@@ -23,23 +23,32 @@ let swiftSettingsSimulator: [SwiftSetting] = [
   ]),
 ]
 
+let cSettingsSimulator: [CSetting] = [
+  .unsafeFlags([
+    "-DTARGET_EXTENSION",
+    "-I", "\(gccIncludePrefix)/include",
+    "-I", "\(gccIncludePrefix)/include-fixed",
+    "-I", "\(gccIncludePrefix)/../../../../arm-none-eabi/include",
+    "-I", "\(home)/Developer/PlaydateSDK/C_API",
+  ])
+]
+
 let package = Package(
-  name: "{{Game Name}}",
+  name: "swift-playdate-examples",
   platforms: [
     .macOS(.v14)
   ],
   products: [
-    .library(name: "{{Game Name}}", targets: ["{{Game Name}}"])
-  ],
-  dependencies: [
-    .package(path: "../..")
+    .library(name: "Playdate", targets: ["Playdate"]),
+    .library(name: "CPlaydate", targets: ["CPlaydate"]),
   ],
   targets: [
     .target(
-      name: "{{Game Name}}",
-      dependencies: [
-        .product(name: "Playdate", package: "swift-playdate-examples")
-      ],
-      swiftSettings: swiftSettingsSimulator)
+      name: "Playdate",
+      dependencies: ["CPlaydate"],
+      swiftSettings: swiftSettingsSimulator),
+    .target(
+      name: "CPlaydate",
+      cSettings: cSettingsSimulator),
   ],
   swiftLanguageVersions: [.version("6"), .v5])
