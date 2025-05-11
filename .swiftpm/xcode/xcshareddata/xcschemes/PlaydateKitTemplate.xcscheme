@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "PlaydateKitTemplate"
-               BuildableName = "PlaydateKitTemplate"
-               BlueprintName = "PlaydateKitTemplate"
+               BlueprintIdentifier = "9thCircle"
+               BuildableName = "9thCircle"
+               BlueprintName = "9thCircle"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,9 +48,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "PlaydateKitTemplate"
-            BuildableName = "PlaydateKitTemplate"
-            BlueprintName = "PlaydateKitTemplate"
+            BlueprintIdentifier = "9thCircle"
+            BuildableName = "9thCircle"
+            BlueprintName = "9thCircle"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>
