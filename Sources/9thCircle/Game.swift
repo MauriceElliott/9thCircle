@@ -6,12 +6,12 @@ final class Game: PlaydateGame {
     // MARK: Lifecycle
 
     init() {
-        logo.addToDisplayList()
+        player.addToDisplayList()
     }
 
     // MARK: Internal
 
-    let logo = Logo()
+    let player = Player()
 
     func update() -> Bool {
         Sprite.updateAndDrawDisplayListSprites()
