@@ -38,16 +38,16 @@ class Player: Sprite.Sprite {
         
         let currentSpeed = isOnGround ? moveSpeed : moveSpeed * airControlFactor
 
-        if System.buttonState.current == PDButtons.left {
+        if System.buttonState.current.contains(PDButtons.left) {
             velocity.dx = -currentSpeed
-        } else if System.buttonState.current == PDButtons.right {
+        } else if System.buttonState.current.contains(PDButtons.right) {
             velocity.dx = currentSpeed
         } else {
             velocity.dx = 0
         }
         
         //Jump TODO: needs to moved out to game state rather than specifically checking the buttons here.
-        if System.buttonState.current == PDButtons.a && isOnGround {
+        if System.buttonState.current.contains(PDButtons.a) && isOnGround {
             isJumping = true
             velocity.dy = -jumpForce
         }
@@ -60,11 +60,11 @@ class Player: Sprite.Sprite {
             }
         }
         
-        position.x += velocity.dx * dt
-        position.y += velocity.dy * dt
+        position.x = velocity.dx * dt //Was +=
+        position.y = velocity.dy * dt //Was +=
         
         if position.y >= groundLevelY {
-            if velocity.dy > 0 {
+            if velocity.dy >= 0 {
                 position.y = groundLevelY
                 velocity.dy = 0
                 isOnGround = true
