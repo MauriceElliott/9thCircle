@@ -4,7 +4,7 @@ class Player: Sprite.Sprite {
     var velocity: (dx: Float, dy: Float)
     
     //Vars
-    var isOnGround: Bool = false
+    var isOnGround: Bool = true
     var isJumping: Bool = false
 
     //Movement Statics - These define params for movement, would be awesome to make them adjustable at some point.
@@ -22,7 +22,7 @@ class Player: Sprite.Sprite {
         super.init()
         position.y = groundLevelY
         image = try! Graphics.Bitmap(path: "test.png")
-        bounds = .init(x: 0, y: 0, width: 20, height: 40)
+//        bounds = .init(x: 0, y: 0, width: 20, height: 40)
         if position.y >= groundLevelY {
             position.y = groundLevelY
             isOnGround = true
@@ -60,8 +60,8 @@ class Player: Sprite.Sprite {
             }
         }
         
-        position.x = velocity.dx * dt //Was +=
-        position.y = velocity.dy * dt //Was +=
+        position.x += velocity.dx * dt //Was +=
+        position.y += velocity.dy * dt //Was +=
         
         if position.y >= groundLevelY {
             if velocity.dy >= 0 {
