@@ -9,7 +9,7 @@ let package = Package(
     platforms: [.macOS(.v14)],
     products: [.library(name: "9thCircle", targets: ["9thCircle"])],
     dependencies: [
-        .package(url: "https://github.com/finnvoor/PlaydateKit.git", branch: "main"),
+        .package(url: "https://github.com/finnvoor/PlaydateKit.git", branch: "improvement/swiftpm-build-system"),
     ],
     targets: [
         .target(
