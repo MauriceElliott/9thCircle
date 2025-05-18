@@ -17,6 +17,7 @@ let package = Package(
             dependencies: [
                 .product(name: "PlaydateKit", package: "PlaydateKit")
             ],
+            exclude: ["Resources"],
             swiftSettings: [
                 .enableExperimentalFeature("Embedded"),
                 .unsafeFlags([
