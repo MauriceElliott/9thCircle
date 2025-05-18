@@ -51,7 +51,7 @@ class Player: Sprite.Sprite {
             velocity.dy = Float(-currentSpeed)
         }
         
-        position.x += (velocity.dx * dt)
-        position.y += (velocity.dy * dt)
+//        position.x += (velocity.dx * dt)
+//        position.y += (velocity.dy * dt)
     }
 }
