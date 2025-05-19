@@ -4,15 +4,13 @@ import PlaydateKit
 
 final class Game: PlaydateGame {
     // MARK: Lifecycle
+    let player = Player()
 
     init() {
         player.addToDisplayList()
     }
 
     // MARK: Internal
-
-    let player = Player()
-
     func update() -> Bool {
         Sprite.updateAndDrawDisplayListSprites()
         System.drawFPS()

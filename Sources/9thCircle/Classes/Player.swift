@@ -1,5 +1,11 @@
 import PlaydateKit
 
+func formatFloat(double: Double) -> String {
+    let int = Int(double)
+    let frac = Int((double - Double(int)) * 100)
+    return "\(int).\(frac)"
+}
+
 class Player: Sprite.Sprite {
     var velocity: (dx: Float, dy: Float)
     
@@ -23,35 +29,48 @@ class Player: Sprite.Sprite {
     // MARK: Internal
 
     override func update() {
+        velocity = (dx: 0, dy: 0)
         //Super accurate DeltaTime
         let dt = System.elapsedTime
         System.resetElapsedTime()
         
-        if System.buttonState.current.contains(PDButtons.a) {
+        print("start")
+        
+        if !System.buttonState.pushed.intersection([.a]).isEmpty {
+            print("is jumping")
             isJumping = true
         }
         
         if position.y >= groundLevelY {
-            isOnGround = false
+            print("is on ground")
+            isOnGround = true
         }
-        
         
         let currentSpeed = isOnGround ? 0 : isJumping ? -1.000 : 1.000
         
-        if System.buttonState.current.contains(PDButtons.left) {
+        print("cs: \(Int(currentSpeed))")
+        
+        if !System.buttonState.pushed.intersection([.left]).isEmpty {
+            print("left")
             velocity.dx = Float(-currentSpeed)
         }
-        if System.buttonState.current.contains(PDButtons.right) {
+        if !System.buttonState.pushed.intersection([.right]).isEmpty {
+            print("right")
             velocity.dx = Float(currentSpeed)
         }
         
         if isJumping {
+            print("is jumping!")
             velocity.dy = Float(currentSpeed)
         } else if !isOnGround {
+            print("is on ground!")
             velocity.dy = Float(-currentSpeed)
         }
         
-//        position.x += (velocity.dx * dt)
-//        position.y += (velocity.dy * dt)
+        print("vel, x: \(Int(velocity.dx)), y: \(Int(velocity.dy))")
+        print("pos, x: \(Int(position.x)), y: \(Int(position.y))")
+        print(formatFloat(double: Double(velocity.dx * dt)))
+        position.x += (velocity.dx * dt)
+        position.y += (velocity.dy * dt)
     }
 }
