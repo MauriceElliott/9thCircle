@@ -70,6 +70,6 @@ class Player: Sprite.Sprite {
         print("pos, x: \(Int(position.x)), y: \(Int(position.y))")
         print(formatFloat(double: Double(velocity.dy)))
         
-        position = Point(x: (position.x + (velocity.dx * dt)), y: (position.y + (velocity.dy * dt)))
+        moveBy(dx: velocity.dx, dy: velocity.dy)
     }
 }
