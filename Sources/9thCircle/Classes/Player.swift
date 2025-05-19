@@ -22,7 +22,7 @@ class Player: Sprite.Sprite {
         position.x = 120
         position.y = 200
         image = try! Graphics.Bitmap(path: "test.png")
-        bounds = .init(x: 120, y: 200, width: 20, height: 40)
+//        bounds = .init(x: 120, y: 200, width: 20, height: 40)
         isOnGround = true
     }
 
@@ -42,7 +42,6 @@ class Player: Sprite.Sprite {
         }
         
         if position.y >= groundLevelY {
-            print("is on ground")
             isOnGround = true
         }
         
@@ -69,8 +68,8 @@ class Player: Sprite.Sprite {
         
         print("vel, x: \(Int(velocity.dx)), y: \(Int(velocity.dy))")
         print("pos, x: \(Int(position.x)), y: \(Int(position.y))")
-        print(formatFloat(double: Double(velocity.dx * dt)))
-        position.x += (velocity.dx * dt)
-        position.y += (velocity.dy * dt)
+        print(formatFloat(double: Double(velocity.dy)))
+        
+        position = Point(x: (position.x + (velocity.dx * dt)), y: (position.y + (velocity.dy * dt)))
     }
 }
