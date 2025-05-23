@@ -39,21 +39,25 @@ class Player: Sprite.Sprite {
         if !System.buttonState.pushed.intersection([.a]).isEmpty {
             print("is jumping")
             isJumping = true
+        } else {
+            isJumping = false
         }
         
-        if position.y >= groundLevelY {
+        if position.y == groundLevelY {
             isOnGround = true
+        } else {
+            isOnGround = false
         }
         
-        let currentSpeed = isOnGround ? 0 : isJumping ? -1.000 : 1.000
+        let currentSpeed = isJumping ? -1000 : isOnGround ? 0 : 1000
         
         print("cs: \(Int(currentSpeed))")
         
-        if !System.buttonState.pushed.intersection([.left]).isEmpty {
+        if !System.buttonState.current.intersection([.left]).isEmpty {
             print("left")
             velocity.dx = Float(-currentSpeed)
         }
-        if !System.buttonState.pushed.intersection([.right]).isEmpty {
+        if !System.buttonState.current.intersection([.right]).isEmpty {
             print("right")
             velocity.dx = Float(currentSpeed)
         }
@@ -70,6 +74,6 @@ class Player: Sprite.Sprite {
         print("pos, x: \(Int(position.x)), y: \(Int(position.y))")
         print(formatFloat(double: Double(velocity.dy)))
         
-        moveBy(dx: velocity.dx, dy: velocity.dy)
+        moveBy(dx: (velocity.dx * dt), dy: (velocity.dy * dt))
     }
 }
