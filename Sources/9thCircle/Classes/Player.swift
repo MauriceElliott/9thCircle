@@ -59,10 +59,6 @@ class Player: Sprite.Sprite {
             velocity.dy = jumpStrength
             isOnGround = false
         }
-        
-        if !System.buttonState.pushed.intersection([.b]).isEmpty && !isOnGround {
-            velocity.dy = (gravity * dt) * 4
-        }
 
         //Apply the movement
         moveBy(dx: (velocity.dx * dt), dy: (velocity.dy * dt))
