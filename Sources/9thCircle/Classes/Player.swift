@@ -42,7 +42,6 @@ class Player: Sprite.Sprite {
         System.resetElapsedTime()
         
         if !isOnGround {
-            print("is not on ground, apply gravity.")
             velocity.dy += gravity * dt
         }
         
@@ -50,39 +49,29 @@ class Player: Sprite.Sprite {
         velocity.dx = 0
 
         if !System.buttonState.current.intersection([.left]).isEmpty {
-            print("left")
             velocity.dx = -moveSpeed
         }
         if !System.buttonState.current.intersection([.right]).isEmpty {
-            print("right")
             velocity.dx = moveSpeed
         }
 
         if !System.buttonState.pushed.intersection([.a]).isEmpty && isOnGround {
-            print("is jumping")
             velocity.dy = jumpStrength
             isOnGround = false
         }
-        
-        
-//        print("vel, x: \(Int(velocity.dx)), y: \(Int(velocity.dy))")
-//        print("pos, x: \(Int(position.x)), y: \(Int(position.y))")
-//        print(formatFloat(double: Double(velocity.dy)))
-        
+
+        //Apply the movement
         moveBy(dx: (velocity.dx * dt), dy: (velocity.dy * dt))
         
+        //Check colission and reset movement values.
         if position.y >= groundLevelY {
-            print("position is greater than or equal to ground level!")
             moveTo(Point(x: position.x, y: groundLevelY))
             if velocity.dy > 0 {
-                print("if velocity.dy > 0")
                 velocity.dy = 0
             }
             isOnGround = true
         } else {
-            print("else!")
             if position.y < groundLevelY {
-                print("if pos.y < groundLevelY, is on ground is false.")
                  isOnGround = false
             }
         }
