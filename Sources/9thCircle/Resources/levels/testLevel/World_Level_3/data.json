@@ -1,0 +1,45 @@
+{
+	"identifier": "World_Level_3",
+	"uniqueIdentifer": "998e0ff0-8990-11ee-a8df-23d8e1d7d527",
+	"x": 848,
+	"y": 0,
+	"width": 304,
+	"height": 320,
+	"bgColor": "#50506A",
+	"neighbourLevels": [
+		{
+			"levelIid": "a315ac10-66b0-11ec-9cd7-99f223ad6ade",
+			"dir": "w"
+		},
+		{
+			"levelIid": "a316bd80-66b0-11ec-9cd7-c50cdc9d2cc4",
+			"dir": "n"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Bg_textures.png",
+		"Collisions.png",
+		"Wall_shadows.png"
+	],
+	"entities": {
+		"Chest": [
+			{
+				"id": "Chest",
+				"iid": "9cd93bf0-8990-11ee-acc7-d34c74d2ba3f",
+				"layer": "Entities",
+				"x": 152,
+				"y": 80,
+				"width": 24,
+				"height": 24,
+				"color": 39387,
+				"customFields": {
+					"content": [
+						"Water",
+						"Gem"
+					]
+				}
+			}
+		]
+	}
+}
