@@ -34,8 +34,6 @@ class Player: Sprite.Sprite {
         isOnGround = (position.y >= groundLevelY)
     }
 
-    // MARK: Internal
-
     override func update() {
         //Super accurate DeltaTime
         let dt = System.elapsedTime
