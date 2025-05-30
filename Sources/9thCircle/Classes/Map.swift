@@ -7,7 +7,7 @@
 
 import PlaydateKit
 
-class Map: Sprite.Sprite {
+class Room: Sprite.Sprite {
     override init() {
         super.init()
         do {
