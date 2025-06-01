@@ -1,25 +1,31 @@
-#! /bin/sh
+#!/usr/local/bin/fish
 set -e
 
-PRODUCT_NAME="ninethCircle"
+set PRODUCT_NAME "ninethCircle"
 
-cleanup() {
-    osascript -e 'quit app "Playdate Simulator"' 2>/dev/null
-}
+function cleanup
+    osascript -e 'quit app "Playdate Simulator"' ^/dev/null
+end
 
-trap cleanup EXIT
+# Register cleanup to run on script exit
+function on_exit --on-event fish_exit
+    cleanup
+end
 
-SWIFT=$(xcrun -f swift -toolchain "swift latest")
-
-"$SWIFT" package pdc
+set SWIFT (xcrun -f swift -toolchain "swift latest")
+cd ..
+$SWIFT package pdc
 
 # Create a symbolic link to the compiled pdx in the Playdate Simulator Games dir
-# This allows browsing the pdx as a sideloaded game, helpful for checking icons
-if [ -L ~/Developer/PlaydateSDK/Disk/Games/$PRODUCT_NAME.pdx ]; then
-    rm -rf ~/Developer/PlaydateSDK/Disk/Games/$PRODUCT_NAME.pdx
-fi
-echo "$(pwd)/.build/plugins/PDCPlugin/outputs/$PRODUCT_NAME.pdx"
+set PDX_PATH (pwd)/.build/plugins/PDCPlugin/outputs/$PRODUCT_NAME.pdx
+set LINK_PATH ~/Developer/PlaydateSDK/Disk/Games/$PRODUCT_NAME.pdx
 
-ln -s "$(pwd)/.build/plugins/PDCPlugin/outputs/$PRODUCT_NAME.pdx" ~/Developer/PlaydateSDK/Disk/Games/$PRODUCT_NAME.pdx
+if test -L $LINK_PATH
+    rm -rf $LINK_PATH
+end
 
-~/Developer/PlaydateSDK/bin/Playdate\ Simulator.app/Contents/MacOS/Playdate\ Simulator ~/Developer/PlaydateSDK/Disk/Games/$PRODUCT_NAME.pdx
+echo $PDX_PATH
+
+ln -s $PDX_PATH $LINK_PATH
+
+~/Developer/PlaydateSDK/bin/Playdate\ Simulator.app/Contents/MacOS/Playdate\ Simulator $LINK_PATH
