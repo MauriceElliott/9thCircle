@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9thCircle"
-               BuildableName = "9thCircle"
-               BlueprintName = "9thCircle"
+               BlueprintIdentifier = "ninethCircle"
+               BuildableName = "ninethCircle"
+               BlueprintName = "ninethCircle"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,9 +48,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9thCircle"
-            BuildableName = "9thCircle"
-            BlueprintName = "9thCircle"
+            BlueprintIdentifier = "ninethCircle"
+            BuildableName = "ninethCircle"
+            BlueprintName = "ninethCircle"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>
@@ -58,6 +58,16 @@
          <EnvironmentVariable
             key = "PRODUCT_NAME"
             value = "$(PRODUCT_NAME)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "PLAYDATE_SDK_PATH"
+            value = "$(HOME)/Developer/PlaydateSDK"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "PATH"
+            value = "$(HOME)/Developer/PlaydateSDK/bin:$(PATH)"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
