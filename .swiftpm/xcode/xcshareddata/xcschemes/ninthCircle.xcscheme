@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ninethCircle"
-               BuildableName = "ninethCircle"
-               BlueprintName = "ninethCircle"
+               BlueprintIdentifier = "ninthCircle"
+               BuildableName = "ninthCircle"
+               BlueprintName = "ninthCircle"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,9 +48,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ninethCircle"
-            BuildableName = "ninethCircle"
-            BlueprintName = "ninethCircle"
+            BlueprintIdentifier = "ninthCircle"
+            BuildableName = "ninthCircle"
+            BlueprintName = "ninthCircle"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>

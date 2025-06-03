@@ -10,15 +10,15 @@ import PackageDescription
 let xcode = (Context.environment["XPC_SERVICE_NAME"]?.count ?? 0) > 2
 
 let package = Package(
-    name: "ninethCircle",
+    name: "ninthCircle",
     platforms: [.macOS(.v14)],
-    products: [.library(name: "ninethCircle", type: xcode ? nil : .dynamic, targets: ["ninethCircle"])],
+    products: [.library(name: "ninthCircle", type: xcode ? nil : .dynamic, targets: ["ninthCircle"])],
     dependencies: [
         .package(url: "https://github.com/finnvoor/PlaydateKit.git", branch: "main"),
     ],
     targets: [
         .target(
-            name: "ninethCircle",
+            name: "ninthCircle",
             dependencies: [.product(name: "PlaydateKit", package: "PlaydateKit")],
             exclude: ["Resources"],
             swiftSettings: [

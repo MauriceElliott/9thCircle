@@ -7,7 +7,7 @@
 
 import PlaydateKit
 
-class Platform: Sprite.Sprite {
+class LevelOneScene: Sprite.Sprite {
     override init() {
         super.init()
         do {
