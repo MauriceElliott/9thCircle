@@ -1,5 +1,4 @@
 #!/usr/local/bin/fish
-set -e
 
 set PRODUCT_NAME "ninethCircle"
 
