@@ -1,17 +1,17 @@
 //
-//  Map.swift
-//  9thCircle
+//  Platform.swift
+//  ninethCircle
 //
-//  Created by Maurice Elliott on 26/05/2025.
+//  Created by Maurice Elliott on 03/06/2025.
 //
 
 import PlaydateKit
 
-class Room: Sprite.Sprite {
+class Platform: Sprite.Sprite {
     override init() {
         super.init()
         do {
-            image = try Graphics.Bitmap(path: "testLevel.png")
+            image = try Graphics.Bitmap(path: "platform1.png")
         } catch {
             System.log("Failed to load player image: \(error)")
         }

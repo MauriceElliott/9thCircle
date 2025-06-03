@@ -5,9 +5,11 @@ import PlaydateKit
 final class Game: PlaydateGame {
     // MARK: Lifecycle
     let player = Player()
+    let room = Room()
 
     init() {
         player.addToDisplayList()
+        room.addToDisplayList()
     }
 
     // MARK: Internal

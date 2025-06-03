@@ -6,6 +6,7 @@ import PackageDescription
 /// Hack to force Xcode builds to not produce a dylib, since linking fails
 /// without a toolset.json specified. Ideally this can be removed if/when
 /// Xcode gains toolset.json support.
+
 let xcode = (Context.environment["XPC_SERVICE_NAME"]?.count ?? 0) > 2
 
 let package = Package(
