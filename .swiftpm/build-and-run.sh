@@ -1,6 +1,6 @@
 #!/usr/local/bin/fish
 
-set PRODUCT_NAME "ninethCircle"
+set PRODUCT_NAME "ninthCircle"
 
 function cleanup
     osascript -e 'quit app "Playdate Simulator"' ^/dev/null
