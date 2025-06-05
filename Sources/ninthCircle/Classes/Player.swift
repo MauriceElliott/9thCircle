@@ -7,7 +7,7 @@
 
 import PlaydateKit
 
-class Player: Sprite.Sprite {
+class Player: Scene {
     var velocity: (dx: Float, dy: Float)
     
     //Vars

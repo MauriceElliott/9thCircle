@@ -5,15 +5,16 @@ import PlaydateKit
 final class Game: PlaydateGame {
     // MARK: Lifecycle
     let player = Player()
-    let room = Room()
 
     init() {
+        Graphics.clear(color: .black)
+        Graphics.setBackgroundColor(.black)
         player.addToDisplayList()
-        room.addToDisplayList()
     }
 
     // MARK: Internal
     func update() -> Bool {
+        Graphics.clear(color: .black)
         Sprite.updateAndDrawDisplayListSprites()
         System.drawFPS()
         return true
