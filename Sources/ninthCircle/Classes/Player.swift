@@ -9,13 +9,13 @@ import PlaydateKit
 
 class Player: Scene {
     var velocity: (dx: Float, dy: Float)
-    
+
     //Vars
     var isOnGround: Bool = true
-    
+
     // Constants
     let gravity: Float = 1500
-    let jumpStrength: Float = -600
+    let jumpStrength: Float = -450
     let moveSpeed: Float = 200
 
     //Will be removed map tiles are finished.
@@ -38,11 +38,11 @@ class Player: Scene {
         //Super accurate DeltaTime
         let dt = System.elapsedTime
         System.resetElapsedTime()
-        
+
         if !isOnGround {
             velocity.dy += gravity * dt
         }
-        
+
         //Reset horizontal momentum
         velocity.dx = 0
 
@@ -60,7 +60,7 @@ class Player: Scene {
 
         //Apply the movement
         moveBy(dx: (velocity.dx * dt), dy: (velocity.dy * dt))
-        
+
         //Check colission and reset movement values.
         if position.y >= groundLevelY {
             moveTo(Point(x: position.x, y: groundLevelY))
@@ -70,7 +70,7 @@ class Player: Scene {
             isOnGround = true
         } else {
             if position.y < groundLevelY {
-                 isOnGround = false
+                isOnGround = false
             }
         }
     }

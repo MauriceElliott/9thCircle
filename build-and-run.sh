@@ -12,7 +12,7 @@ function on_exit --on-event fish_exit
 end
 
 set SWIFT (xcrun -f swift -toolchain "swift latest")
-cd ..
+
 $SWIFT package pdc
 
 # Create a symbolic link to the compiled pdx in the Playdate Simulator Games dir

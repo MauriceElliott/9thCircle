@@ -7,14 +7,11 @@ final class Game: PlaydateGame {
     let player = Player()
 
     init() {
-        Graphics.clear(color: .black)
-        Graphics.setBackgroundColor(.black)
         player.addToDisplayList()
     }
 
     // MARK: Internal
     func update() -> Bool {
-        Graphics.clear(color: .black)
         Sprite.updateAndDrawDisplayListSprites()
         System.drawFPS()
         return true
