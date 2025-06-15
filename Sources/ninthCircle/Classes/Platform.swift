@@ -7,7 +7,7 @@
 
 import PlaydateKit
 
-class LevelOneScene: Scene {
+class FirstScreen: Scene {
     override init() {
         super.init()
         do {
@@ -20,7 +20,6 @@ class LevelOneScene: Scene {
     }
 
     override func update() {
-        //Super accurate DeltaTime
         let dt = System.elapsedTime
         System.resetElapsedTime()
     }

@@ -19,7 +19,7 @@ class Player: Scene {
     let moveSpeed: Float = 200
 
     //Will be removed map tiles are finished.
-    let groundLevelY: Float = 200
+    let groundLevelY: Float = 100
 
     override init() {
         velocity = (dx: 0, dy: 0)
