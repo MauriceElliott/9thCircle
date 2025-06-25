@@ -1,0 +1,8 @@
+{
+  "dap": {
+    "CodeLLDB": {
+      "binary": "//Users/mauriceelliott/.swiftly/bin/lldb-dap",
+      "args": []
+    }
+  }
+}
