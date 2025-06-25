@@ -1,5 +1,5 @@
 {
-  "originHash" : "12985ddd8625a1696a3f95fca0abf0851abc7c970b645e3494f39873d1a2b12d",
+  "originHash" : "cbb4bc5063df116b6d7045f8f01f5806e5fb900a5a9583a901c2869b8a0e0d33",
   "pins" : [
     {
       "identity" : "playdatekit",
@@ -8,6 +8,15 @@
       "state" : {
         "branch" : "main",
         "revision" : "8434134cf939780f843bb4f1e88de9f0a0199a6e"
+      }
+    },
+    {
+      "identity" : "swiftldtksimpleimporter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MauriceElliott/SwiftLDtkSimpleImporter",
+      "state" : {
+        "branch" : "main",
+        "revision" : "87bf139ab7e928ec86ca5febb225d15c6de027e6"
       }
     }
   ],

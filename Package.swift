@@ -12,14 +12,20 @@ let xcode = (Context.environment["XPC_SERVICE_NAME"]?.count ?? 0) > 2
 let package = Package(
     name: "ninthCircle",
     platforms: [.macOS(.v14)],
-    products: [.library(name: "ninthCircle", type: xcode ? nil : .dynamic, targets: ["ninthCircle"])],
+    products: [
+        .library(name: "ninthCircle", type: xcode ? nil : .dynamic, targets: ["ninthCircle"])
+    ],
     dependencies: [
         .package(url: "https://github.com/finnvoor/PlaydateKit.git", branch: "main"),
+        .package(url: "https://github.com/MauriceElliott/SwiftLDtkSimpleImporter", branch: "main"),
     ],
     targets: [
         .target(
             name: "ninthCircle",
-            dependencies: [.product(name: "PlaydateKit", package: "PlaydateKit")],
+            dependencies: [
+                .product(name: "PlaydateKit", package: "PlaydateKit"),
+                .product(name: "SwiftLDtkSimpleImporter", package: "SwiftLDtkSimpleImporter"),
+            ],
             exclude: ["Resources"],
             swiftSettings: [
                 .enableExperimentalFeature("Embedded"),
@@ -29,10 +35,9 @@ let package = Package(
                     "-Xfrontend", "-disable-stack-protector",
                     "-Xfrontend", "-function-sections",
                     "-Xfrontend", "-gline-tables-only",
-                    "-Xcc", "-DTARGET_EXTENSION"
+                    "-Xcc", "-DTARGET_EXTENSION",
                 ]),
             ],
         )
     ]
 )
- 
