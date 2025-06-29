@@ -1,10 +1,12 @@
 import PlaydateKit
+import SwiftLDtkSimpleImporter
 
 // MARK: - Game
 
 final class Game: PlaydateGame {
     // MARK: Lifecycle
     let player = Player()
+    let world = LDtkSimpleImporter()
 
     init() {
         player.addToDisplayList()

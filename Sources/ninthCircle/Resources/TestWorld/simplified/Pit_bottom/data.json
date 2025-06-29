@@ -1,0 +1,98 @@
+{
+	"identifier": "Pit_bottom",
+	"uniqueIdentifer": "b7a1be70-66b0-11ec-895f-f7a843c40618",
+	"x": -96,
+	"y": -208,
+	"width": 512,
+	"height": 256,
+	"bgColor": "#37494E",
+	"neighbourLevels": [
+		{
+			"levelIid": "a3591db0-66b0-11ec-9cd7-43878cf4d0ab",
+			"dir": "<"
+		},
+		{
+			"levelIid": "a35992e0-66b0-11ec-9cd7-8b2ebd1b98e2",
+			"dir": "<"
+		},
+		{
+			"levelIid": "a359b9f0-66b0-11ec-9cd7-25dfb937d033",
+			"dir": "<"
+		},
+		{
+			"levelIid": "5cbed650-66b0-11ec-895f-23240977178f",
+			"dir": "n"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Background.png",
+		"Collisions.png"
+	],
+	"entities": {
+		"Plant": [
+			{
+				"id": "Plant",
+				"iid": "e883cb60-66b0-11ec-8fc6-b1b7ad86c0ce",
+				"layer": "Entities",
+				"x": 264,
+				"y": 208,
+				"width": 20,
+				"height": 20,
+				"color": 10485504,
+				"customFields": {
+					"plantType": "Fruit",
+					"count": 1
+				}
+			},
+			{
+				"id": "Plant",
+				"iid": "ea28c8d0-66b0-11ec-8fc6-77aa2f817608",
+				"layer": "Entities",
+				"x": 456,
+				"y": 192,
+				"width": 20,
+				"height": 20,
+				"color": 10485504,
+				"customFields": {
+					"plantType": "Root",
+					"count": 1
+				}
+			},
+			{
+				"id": "Plant",
+				"iid": "ec1f1a90-66b0-11ec-8fc6-a72b61561d5e",
+				"layer": "Entities",
+				"x": 24,
+				"y": 176,
+				"width": 20,
+				"height": 20,
+				"color": 10485504,
+				"customFields": {
+					"plantType": "Clover",
+					"count": 1
+				}
+			}
+		],
+		"Door": [
+			{
+				"id": "Door",
+				"iid": "796d2950-8dc0-11ec-a525-75b5a5ce20f8",
+				"layer": "Entities",
+				"x": 72,
+				"y": 240,
+				"width": 16,
+				"height": 16,
+				"color": 16690740,
+				"customFields": {
+					"link": {
+						"entityIid": "7e1072a0-8dc0-11ec-a525-4d0952d12de1",
+						"layerIid": "490eb810-66b0-11ec-8fc6-39dd599e975c",
+						"levelIid": "a35992e0-66b0-11ec-9cd7-8b2ebd1b98e2",
+						"worldIid": "ca0e9bf0-c640-11ed-ad34-5d947c1a0a9f"
+					}
+				}
+			}
+		]
+	}
+}

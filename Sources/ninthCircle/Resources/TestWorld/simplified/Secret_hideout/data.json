@@ -1,0 +1,74 @@
+{
+	"identifier": "Secret_hideout",
+	"uniqueIdentifer": "a35b8eb0-66b0-11ec-9cd7-3d16ec48af10",
+	"x": 320,
+	"y": 128,
+	"width": 272,
+	"height": 176,
+	"bgColor": "#37494E",
+	"neighbourLevels": [
+		{
+			"levelIid": "720af480-66b0-11ec-895f-a114f0383ca2",
+			"dir": "<"
+		},
+		{
+			"levelIid": "a35a2f20-66b0-11ec-9cd7-db6f994e2834",
+			"dir": "n"
+		},
+		{
+			"levelIid": "a35acb61-66b0-11ec-9cd7-f76e35cfda30",
+			"dir": "e"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Background.png",
+		"Collisions.png"
+	],
+	"entities": {
+		"Plant": [
+			{
+				"id": "Plant",
+				"iid": "dfdcd420-66b0-11ec-8fc6-d3872b388a2a",
+				"layer": "Entities",
+				"x": 88,
+				"y": 128,
+				"width": 20,
+				"height": 20,
+				"color": 10485504,
+				"customFields": {
+					"plantType": "Golden",
+					"count": 1
+				}
+			},
+			{
+				"id": "Plant",
+				"iid": "340fda10-66b0-11ec-8fc6-ff45663f8d26",
+				"layer": "Entities",
+				"x": 152,
+				"y": 128,
+				"width": 20,
+				"height": 20,
+				"color": 10485504,
+				"customFields": {
+					"plantType": "Golden",
+					"count": 1
+				}
+			},
+			{
+				"id": "Plant",
+				"iid": "ac192aa0-7820-11ed-b9f3-85d24353256d",
+				"layer": "Entities",
+				"x": 56,
+				"y": 112,
+				"width": 20,
+				"height": 20,
+				"color": 10485504,
+				"customFields": {
+					"plantType": "Golden",
+					"count": 1
+				}
+			}
+		]
+	}
+}

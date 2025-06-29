@@ -1,0 +1,64 @@
+{
+	"identifier": "Top",
+	"uniqueIdentifer": "a35944c0-66b0-11ec-9cd7-6b4e2322a69e",
+	"x": 80,
+	"y": -640,
+	"width": 512,
+	"height": 256,
+	"bgColor": "#37494E",
+	"neighbourLevels": [
+		{
+			"levelIid": "5cbed650-66b0-11ec-895f-23240977178f",
+			"dir": ">"
+		},
+		{
+			"levelIid": "a3591db0-66b0-11ec-9cd7-43878cf4d0ab",
+			"dir": "s"
+		},
+		{
+			"levelIid": "a35992e0-66b0-11ec-9cd7-8b2ebd1b98e2",
+			"dir": "s"
+		},
+		{
+			"levelIid": "a359b9f0-66b0-11ec-9cd7-25dfb937d033",
+			"dir": "s"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Background.png",
+		"Collisions.png"
+	],
+	"entities": {
+		"Plant": [
+			{
+				"id": "Plant",
+				"iid": "c0d54170-66b0-11ec-8fc6-fd3592ec5dfc",
+				"layer": "Entities",
+				"x": 440,
+				"y": 224,
+				"width": 20,
+				"height": 20,
+				"color": 10485504,
+				"customFields": {
+					"plantType": "Water_shroom",
+					"count": 1
+				}
+			},
+			{
+				"id": "Plant",
+				"iid": "d7f84280-66b0-11ec-8fc6-2721b8395e4d",
+				"layer": "Entities",
+				"x": 376,
+				"y": 224,
+				"width": 20,
+				"height": 20,
+				"color": 10485504,
+				"customFields": {
+					"plantType": "Water_shroom",
+					"count": 1
+				}
+			}
+		]
+	}
+}

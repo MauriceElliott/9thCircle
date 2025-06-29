@@ -1,0 +1,38 @@
+{
+	"identifier": "Dead_end_west",
+	"uniqueIdentifer": "a35aa451-66b0-11ec-9cd7-438de356526d",
+	"x": -480,
+	"y": -288,
+	"width": 256,
+	"height": 288,
+	"bgColor": "#37494E",
+	"neighbourLevels": [
+		{
+			"levelIid": "a35992e0-66b0-11ec-9cd7-8b2ebd1b98e2",
+			"dir": "e"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Background.png",
+		"Collisions.png"
+	],
+	"entities": {
+		"Plant": [
+			{
+				"id": "Plant",
+				"iid": "e3136e10-66b0-11ec-8fc6-1dfe1e43cabd",
+				"layer": "Entities",
+				"x": 184,
+				"y": 256,
+				"width": 20,
+				"height": 20,
+				"color": 10485504,
+				"customFields": {
+					"plantType": "Water_shroom",
+					"count": 1
+				}
+			}
+		]
+	}
+}

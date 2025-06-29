@@ -1,0 +1,42 @@
+{
+	"identifier": "Pit",
+	"uniqueIdentifer": "a35acb61-66b0-11ec-9cd7-f76e35cfda30",
+	"x": 592,
+	"y": 128,
+	"width": 400,
+	"height": 224,
+	"bgColor": "#37494E",
+	"neighbourLevels": [
+		{
+			"levelIid": "a35a2f20-66b0-11ec-9cd7-db6f994e2834",
+			"dir": "n"
+		},
+		{
+			"levelIid": "a35b8eb0-66b0-11ec-9cd7-3d16ec48af10",
+			"dir": "w"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Background.png",
+		"Collisions.png"
+	],
+	"entities": {
+		"Plant": [
+			{
+				"id": "Plant",
+				"iid": "dc494d20-66b0-11ec-8fc6-5d62b5efd8bd",
+				"layer": "Entities",
+				"x": 168,
+				"y": 160,
+				"width": 20,
+				"height": 20,
+				"color": 10485504,
+				"customFields": {
+					"plantType": "Water_shroom",
+					"count": 1
+				}
+			}
+		]
+	}
+}

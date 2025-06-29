@@ -1,0 +1,58 @@
+{
+	"identifier": "Cliff_cave",
+	"uniqueIdentifer": "a35a7d40-66b0-11ec-9cd7-b57d32c8e175",
+	"x": 656,
+	"y": -416,
+	"width": 320,
+	"height": 288,
+	"bgColor": "#37494E",
+	"neighbourLevels": [
+		{
+			"levelIid": "5cbed650-66b0-11ec-895f-23240977178f",
+			"dir": "w"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Background.png",
+		"Collisions.png"
+	],
+	"entities": {
+		"Plant": [
+			{
+				"id": "Plant",
+				"iid": "f0d74b70-66b0-11ec-8fc6-0114fc134676",
+				"layer": "Entities",
+				"x": 72,
+				"y": 240,
+				"width": 20,
+				"height": 20,
+				"color": 10485504,
+				"customFields": {
+					"plantType": "Fruit",
+					"count": 2
+				}
+			}
+		],
+		"Door": [
+			{
+				"id": "Door",
+				"iid": "58a45ea0-8dc0-11ec-a525-2786470df187",
+				"layer": "Entities",
+				"x": 280,
+				"y": 112,
+				"width": 16,
+				"height": 16,
+				"color": 16690740,
+				"customFields": {
+					"link": {
+						"entityIid": "5c9ee4d0-8dc0-11ec-a525-4ddce479fcbc",
+						"layerIid": "490eb811-66b0-11ec-8fc6-9b9a3bead751",
+						"levelIid": "a359b9f0-66b0-11ec-9cd7-25dfb937d033",
+						"worldIid": "ca0e9bf0-c640-11ed-ad34-5d947c1a0a9f"
+					}
+				}
+			}
+		]
+	}
+}

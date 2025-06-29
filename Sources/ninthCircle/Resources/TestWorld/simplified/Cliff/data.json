@@ -1,0 +1,58 @@
+{
+	"identifier": "Cliff",
+	"uniqueIdentifer": "5cbed650-66b0-11ec-895f-23240977178f",
+	"x": -80,
+	"y": -560,
+	"width": 736,
+	"height": 352,
+	"bgColor": "#37494E",
+	"neighbourLevels": [
+		{
+			"levelIid": "a3591db0-66b0-11ec-9cd7-43878cf4d0ab",
+			"dir": "<"
+		},
+		{
+			"levelIid": "a35944c0-66b0-11ec-9cd7-6b4e2322a69e",
+			"dir": "<"
+		},
+		{
+			"levelIid": "a35992e0-66b0-11ec-9cd7-8b2ebd1b98e2",
+			"dir": "<"
+		},
+		{
+			"levelIid": "a359b9f0-66b0-11ec-9cd7-25dfb937d033",
+			"dir": "<"
+		},
+		{
+			"levelIid": "a35a7d40-66b0-11ec-9cd7-b57d32c8e175",
+			"dir": "e"
+		},
+		{
+			"levelIid": "b7a1be70-66b0-11ec-895f-f7a843c40618",
+			"dir": "s"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Background.png",
+		"Collisions.png"
+	],
+	"entities": {
+		"Plant": [
+			{
+				"id": "Plant",
+				"iid": "464c9560-66b0-11ec-8fc6-bb54b59cd6ba",
+				"layer": "Entities",
+				"x": 376,
+				"y": 192,
+				"width": 20,
+				"height": 20,
+				"color": 10485504,
+				"customFields": {
+					"plantType": "Root",
+					"count": 1
+				}
+			}
+		]
+	}
+}

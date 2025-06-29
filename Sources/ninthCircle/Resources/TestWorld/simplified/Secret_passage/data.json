@@ -1,0 +1,78 @@
+{
+	"identifier": "Secret_passage",
+	"uniqueIdentifer": "a359b9f0-66b0-11ec-9cd7-25dfb937d033",
+	"x": 400,
+	"y": -384,
+	"width": 256,
+	"height": 256,
+	"bgColor": "#37494E",
+	"neighbourLevels": [
+		{
+			"levelIid": "5cbed650-66b0-11ec-895f-23240977178f",
+			"dir": ">"
+		},
+		{
+			"levelIid": "720af480-66b0-11ec-895f-a114f0383ca2",
+			"dir": "<"
+		},
+		{
+			"levelIid": "b7a1be70-66b0-11ec-895f-f7a843c40618",
+			"dir": ">"
+		},
+		{
+			"levelIid": "a3591db0-66b0-11ec-9cd7-43878cf4d0ab",
+			"dir": "w"
+		},
+		{
+			"levelIid": "a35944c0-66b0-11ec-9cd7-6b4e2322a69e",
+			"dir": "n"
+		},
+		{
+			"levelIid": "a35a2f20-66b0-11ec-9cd7-db6f994e2834",
+			"dir": "s"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Background.png",
+		"Collisions.png"
+	],
+	"entities": {
+		"Plant": [
+			{
+				"id": "Plant",
+				"iid": "bcef0690-66b0-11ec-8fc6-a50e4075387f",
+				"layer": "Entities",
+				"x": 168,
+				"y": 80,
+				"width": 20,
+				"height": 20,
+				"color": 10485504,
+				"customFields": {
+					"plantType": "Rose",
+					"count": 1
+				}
+			}
+		],
+		"Door": [
+			{
+				"id": "Door",
+				"iid": "5c9ee4d0-8dc0-11ec-a525-4ddce479fcbc",
+				"layer": "Entities",
+				"x": 88,
+				"y": 64,
+				"width": 16,
+				"height": 16,
+				"color": 16690740,
+				"customFields": {
+					"link": {
+						"entityIid": "58a45ea0-8dc0-11ec-a525-2786470df187",
+						"layerIid": "490edf21-66b0-11ec-8fc6-f39ef63338fa",
+						"levelIid": "a35a7d40-66b0-11ec-9cd7-b57d32c8e175",
+						"worldIid": "ca0e9bf0-c640-11ed-ad34-5d947c1a0a9f"
+					}
+				}
+			}
+		]
+	}
+}

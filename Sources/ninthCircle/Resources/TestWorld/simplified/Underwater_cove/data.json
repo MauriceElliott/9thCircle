@@ -1,0 +1,50 @@
+{
+	"identifier": "Underwater_cove",
+	"uniqueIdentifer": "a35a2f20-66b0-11ec-9cd7-db6f994e2834",
+	"x": 432,
+	"y": -128,
+	"width": 448,
+	"height": 256,
+	"bgColor": "#37494E",
+	"neighbourLevels": [
+		{
+			"levelIid": "720af480-66b0-11ec-895f-a114f0383ca2",
+			"dir": "<"
+		},
+		{
+			"levelIid": "a359b9f0-66b0-11ec-9cd7-25dfb937d033",
+			"dir": "n"
+		},
+		{
+			"levelIid": "a35acb61-66b0-11ec-9cd7-f76e35cfda30",
+			"dir": "s"
+		},
+		{
+			"levelIid": "a35b8eb0-66b0-11ec-9cd7-3d16ec48af10",
+			"dir": "s"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Background.png",
+		"Collisions.png"
+	],
+	"entities": {
+		"Plant": [
+			{
+				"id": "Plant",
+				"iid": "392a2820-66b0-11ec-8fc6-3f3e416501f0",
+				"layer": "Entities",
+				"x": 216,
+				"y": 96,
+				"width": 20,
+				"height": 20,
+				"color": 10485504,
+				"customFields": {
+					"plantType": "Clover",
+					"count": 2
+				}
+			}
+		]
+	}
+}
