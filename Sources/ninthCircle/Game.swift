@@ -1,5 +1,4 @@
 import PlaydateKit
-import SwiftLDtkSimpleImporter
 
 // MARK: - Game
 

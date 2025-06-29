@@ -16,15 +16,13 @@ let package = Package(
         .library(name: "ninthCircle", type: xcode ? nil : .dynamic, targets: ["ninthCircle"])
     ],
     dependencies: [
-        .package(url: "https://github.com/finnvoor/PlaydateKit.git", branch: "main"),
-        .package(url: "https://github.com/MauriceElliott/SwiftLDtkSimpleImporter", branch: "main"),
+        .package(url: "https://github.com/finnvoor/PlaydateKit.git", branch: "main")
     ],
     targets: [
         .target(
             name: "ninthCircle",
             dependencies: [
-                .product(name: "PlaydateKit", package: "PlaydateKit"),
-                .product(name: "SwiftLDtkSimpleImporter", package: "SwiftLDtkSimpleImporter"),
+                .product(name: "PlaydateKit", package: "PlaydateKit")
             ],
             exclude: ["Resources"],
             swiftSettings: [

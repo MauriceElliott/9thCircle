@@ -9,15 +9,6 @@
         "branch" : "main",
         "revision" : "8434134cf939780f843bb4f1e88de9f0a0199a6e"
       }
-    },
-    {
-      "identity" : "swiftldtksimpleimporter",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/MauriceElliott/SwiftLDtkSimpleImporter",
-      "state" : {
-        "branch" : "main",
-        "revision" : "87bf139ab7e928ec86ca5febb225d15c6de027e6"
-      }
     }
   ],
   "version" : 3

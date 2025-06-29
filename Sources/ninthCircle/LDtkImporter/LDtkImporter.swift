@@ -1,6 +1,8 @@
+import PlaydateKit
+
 /// Main importer class for LDtk Super Simple Export files
 /// Manages project loading, level discovery, and provides access to level data
-public class LDtkSimpleImporter {
+public class LDtkImporter {
 
     // MARK: - Properties
     private let loadData: (_ path: String) throws -> [UInt8]
@@ -43,7 +45,10 @@ public class LDtkSimpleImporter {
             }
         }
 
-        // Stub implementation
+        // Use Graphics API to load tilemap into LDtkObjects
+        // Will need to work out fileList, and generally weird low level data types
+        // May need to manually count total number of Folders in the world to get a definitive answer on where to go next.
+
         return LDtkResult(error: .fileNotFound)
     }
 
