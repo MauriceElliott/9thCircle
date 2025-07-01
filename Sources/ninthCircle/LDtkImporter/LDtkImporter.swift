@@ -3,10 +3,6 @@ import PlaydateKit
 /// Main importer class for LDtk Super Simple Export files
 /// Manages project loading, level discovery, and provides access to level data
 public class LDtkImporter {
-
-    // MARK: - Properties
-    private let loadData: (_ path: String) throws -> [UInt8]
-
     /// Project information loaded from the export
     private var projectInfo: LDtkProjectInfo?
 
@@ -21,12 +17,11 @@ public class LDtkImporter {
 
     // MARK: - Initialization
 
-    public init(with loadOperation: @escaping (_ path: String) throws -> [UInt8]) {
+    public init() {
         self.projectInfo = nil
         self.levelCache = [LDtkLevel]()
         self.isProjectLoaded = false
         self.memoryUsage = 0
-        self.loadData = loadOperation
     }
 
     // MARK: - Public API
@@ -43,6 +38,12 @@ public class LDtkImporter {
                     return LDtkResult(value: true)
                 }
             }
+        }
+
+        let pathContents = try! contentsOfDirectory(atPath: projectPath)
+
+        for path in pathContents {
+            Graphics.drawText(path, at: PlaydateKit.Point(x: 0, y: 200))
         }
 
         // Use Graphics API to load tilemap into LDtkObjects

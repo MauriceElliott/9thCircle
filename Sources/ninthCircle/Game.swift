@@ -5,7 +5,6 @@ import PlaydateKit
 final class Game: PlaydateGame {
     // MARK: Lifecycle
     let player = Player()
-    let world = LDtkSimpleImporter()
 
     init() {
         player.addToDisplayList()

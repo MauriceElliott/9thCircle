@@ -63,7 +63,7 @@ class Player: Scene {
 
         //Check colission and reset movement values.
         if position.y >= groundLevelY {
-            moveTo(Point(x: position.x, y: groundLevelY))
+            moveTo(PlaydateKit.Point(x: position.x, y: groundLevelY))
             if velocity.dy > 0 {
                 velocity.dy = 0
             }
