@@ -7,11 +7,14 @@ final class Game: PlaydateGame {
 
     init() {
         player.addToDisplayList()
+        // world = importer.loadProject(from: "TestWorld/simplified")
     }
 
     // MARK: Internal
 
     let player = Player()
+    // let importer = LDtkImporter()
+    // let world: LDtkResult<Bool>
 
     func update() -> Bool {
         Sprite.updateAndDrawDisplayListSprites()
