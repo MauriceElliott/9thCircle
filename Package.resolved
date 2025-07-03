@@ -1,5 +1,5 @@
 {
-  "originHash" : "cbb4bc5063df116b6d7045f8f01f5806e5fb900a5a9583a901c2869b8a0e0d33",
+  "originHash" : "5bc4272df5494f76528e9fd988d8ce3c031121c2d61282a6efa1f4370f74f833",
   "pins" : [
     {
       "identity" : "playdatekit",
@@ -7,7 +7,7 @@
       "location" : "https://github.com/finnvoor/PlaydateKit.git",
       "state" : {
         "branch" : "main",
-        "revision" : "8434134cf939780f843bb4f1e88de9f0a0199a6e"
+        "revision" : "a6350d8f26dcccb9a2a39d80cce32756bb62df39"
       }
     }
   ],

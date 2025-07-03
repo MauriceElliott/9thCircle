@@ -5,7 +5,7 @@ nonisolated(unsafe) var game: Game!
 @_cdecl("eventHandler") func eventHandler(
     pointer: UnsafeMutablePointer<PlaydateAPI>,
     event: System.Event,
-    _: CUnsignedInt
+    arg _: CUnsignedInt
 ) -> CInt {
     switch event {
     case .initialize:

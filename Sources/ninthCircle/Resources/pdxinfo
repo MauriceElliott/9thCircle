@@ -1,5 +1,5 @@
-name=9thCircle
-author=Maurice Elliott
-description=Template for PlaydateKit projects
-bundleID=com.mauriceelliott.9thCircle
+name=PlaydateKit Template
+author=Finn Voorhees
+description=An example Playdate game built using PlaydateKit
+bundleID=com.finnvoorhees.PlaydateKitTemplate
 imagePath=
